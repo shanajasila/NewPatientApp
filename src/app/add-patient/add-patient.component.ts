@@ -21,6 +21,9 @@ export class AddPatientComponent {
     this.api.addpatient(data).subscribe(
       (response)=>{
         console.log(response)
+        // if (response.status == "success"){
+
+        // }
       }
     )
   }
