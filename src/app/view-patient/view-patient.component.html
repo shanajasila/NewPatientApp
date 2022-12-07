@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row g-3 mt-4">
+        <table class="table   text-center">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>patientname</th>
+                    <th>adress</th>
+                    <th>contactno</th>
+                    <th>dateofappoinment</th>
+                    <th>doctorname</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of patient">
+                    <td>{{i.id}}</td>
+                    <td>{{i.patientname}}</td>
+                    <td>{{i.adress}}</td>
+                    <td>{{i.contactno}}</td>
+                    <td>{{i.dateofappoinment}}</td>
+                    <td>{{i.doctorname}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
