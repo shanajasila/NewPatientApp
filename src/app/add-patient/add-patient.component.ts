@@ -19,11 +19,13 @@ export class AddPatientComponent {
     let data={"id":this.id,"patientname":this.patientname,"adress":this.adress,"contactno":this.contactno,"dateofappoinment":this.dateofappoinment,"doctorname":this.doctorname}
     console.log(data)
     this.api.addpatient(data).subscribe(
-      (response)=>{
+      (response:any)=>{
         console.log(response)
-        // if (response.status == "success"){
-
-        // }
+        if (response.status=="success"){
+          alert("added succesfully")
+        }else{
+          alert("something went wrong")
+        }
       }
     )
   }

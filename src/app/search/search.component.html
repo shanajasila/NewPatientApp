@@ -1,0 +1,42 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <h1 class="text-center mt-4">Search Patient</h1>
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Patient Name</label>
+                    <input type="text" name=" patientname" [(ngModel)]=" patientname" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="readValue()"  class="btn btn-success">Search</button>
+                </div>
+            </div>
+            <div class="row mt-4 g-3"*ngFor="let j of searchData">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Patient Name</label>
+                    <input type="text" class="form-control" value="{{j.patientname}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Contact Number</label>
+                    <input type="text" class="form-control" value="{{j.contactno}}">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Adress</label>
+                    <textarea  id="" cols="10" rows="5" class="form-control" value="{{j.adress}}"></textarea>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Date of Appoinment</label>
+                    <input type="text" class="form-control" value="{{j.dateofappoinment}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Doctor Name</label>
+                    <input type="text" class="form-control" value="{{j.doctorname}}">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="deleteClick(j.id)" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
